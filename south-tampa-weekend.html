@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Quick South Tampa Weekend Plan 🌴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+        
+        /* Events Grid */
+        .events-grid {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 4px solid #2d5a87;
+        }
+        
+        .event-card.family { border-left-color: #10b981; }
+        .event-card.date { border-left-color: #f59e0b; }
+        .event-card.outdoors { border-left-color: #06b6d4; }
+        .event-card.community { border-left-color: #8b5cf6; }
+        .event-card.theater { border-left-color: #ef4444; }
+        
+        .event-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .event-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .event-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .event-desc {
+            font-size: 14px;
+            color: #444;
+        }
+        
+        /* Weekend at a Glance */
+        .weekend-glance {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        .day-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .day-row:last-child {
+            border-bottom: none;
+        }
+        
+        .day-label {
+            font-weight: 600;
+            width: 70px;
+            font-size: 14px;
+        }
+        
+        .day-activities {
+            flex: 1;
+            font-size: 14px;
+            color: #444;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .newsletter h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .newsletter p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter Benefits {
+            font-size: 13px;
+            opacity: 0.8;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter Benefits li {
+            margin-bottom: 6px;
+            list-style: none;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #888;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 24px; }
+            .container { padding: 12px; }
+            .event-card { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <div class="hero">
+            <h1>Your Quick South Tampa Weekend Plan 🌴</h1>
+            <p>A curated look at what's worth doing this weekend in Hyde Park, Westshore, Bayshore, and beyond.</p>
+        </div>
+        
+        <!-- This Weekend's Picks -->
+        <h2 class="section-header">5 Things Worth Doing This Weekend</h2>
+        
+        <div class="events-grid">
+            <div class="event-card family">
+                <div class="event-icon">🌸</div>
+                <div class="event-title">Posies Flower Truck</div>
+                <div class="event-meta">Fri & Sat · 11 AM – 3 PM · Hyde Park Village</div>
+                <div class="event-desc">Stroll through Village Circle and build your own bouquet from a fresh seasonal flower selection.</div>
+            </div>
+            
+            <div class="event-card date">
+                <div class="event-icon">🎨</div>
+                <div class="event-title">Color Me Mine Date Night</div>
+                <div class="event-meta">Friday · 5 PM until close · Hyde Park Village</div>
+                <div class="event-desc">Couples get BOGO studio fees on Friday nights. Easy, creative date idea.</div>
+            </div>
+            
+            <div class="event-card outdoors">
+                <div class="event-icon">🚴</div>
+                <div class="event-title">Bike Westshore Ride</div>
+                <div class="event-meta">Saturday · 9:30 AM – 12:30 PM · Avion Park / Westshore</div>
+                <div class="event-desc">Guided community bike ride through Westshore highlighting safe routes and public art.</div>
+            </div>
+            
+            <div class="event-card community">
+                <div class="event-icon">🦸</div>
+                <div class="event-title">Heroes on the Run 5K</div>
+                <div class="event-meta">Sunday · 7:00 AM · Gadsden Park / South Tampa</div>
+                <div class="event-desc">Superhero-themed charity run supporting pediatric patients and families.</div>
+            </div>
+            
+            <div class="event-card theater">
+                <div class="event-icon">🎭</div>
+                <div class="event-title">The Shark Is Broken</div>
+                <div class="event-meta">Weekend Performances · Straz Center</div>
+                <div class="event-desc">Behind-the-scenes stage production inspired by the making of Jaws.</div>
+            </div>
+        </div>
+        
+        <!-- Weekend at a Glance -->
+        <div class="weekend-glance">
+            <h2 class="section-header">Weekend at a Glance ⚡</h2>
+            
+            <div class="day-row">
+                <div class="day-label">Friday 🌸</div>
+                <div class="day-activities">Posies Flower Truck → Color Me Mine Date Night</div>
+            </div>
+            
+            <div class="day-row">
+                <div class="day-label">Saturday 🚴</div>
+                <div class="day-activities">Bike Westshore Ride → Hyde Park stroll</div>
+            </div>
+            
+            <div class="day-row">
+                <div class="day-label">Sunday 🦸</div>
+                <div class="day-activities">Heroes on the Run 5K → Theater option</div>
+            </div>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <h2>Get South Tampa Plans in Your Inbox ✉️</h2>
+            <p>Once a week — every Friday morning before the weekend hits.</p>
+            
+            <ul class="Benefits">
+                <li>✓ Weekend event picks — hand-selected</li>
+                <li>✓ New restaurant openings & local specials</li>
+                <li>✓ Hidden gems from around South Tampa</li>
+            </ul>
+            
+            <a href="https://visit-south-tampa.beehiiv.com/subscribe" class="cta-button">Join the List — It's Free</a>
+            
+            <p style="margin-top: 16px; font-size: 12px; opacity: 0.7;">🎉 No spam. No ads. Unsubscribe anytime.</p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 Visit South Tampa · Curated for South Tampa locals</p>
+        </div>
+    </div>
+</body>
+</html>

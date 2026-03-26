@@ -384,13 +384,19 @@
             <h2>📢 Advertise Your Business</h2>
             <p>Reach thousands of South Tampa locals every week. Get your business in front of an engaged, local audience.</p>
             
-            <a href="http://formfreely.com/embed/a1708c29-14d3-47bd-bb05-0ade6eb3881a" target="_blank" class="advertise-button">
+            <button class="advertise-button" onclick="openAdvertiseForm()">
                 <img src="https://www.coupons4tampabay.com/wp-content/uploads/2023/01/add-busines.png" alt="Advertise with Visit South Tampa" style="width:100%;max-width:400px;border-radius:12px;margin-bottom:16px;">
                 <br>List Your Business Today →
-            </a>
+            </button>
             
             <p style="font-size: 12px; opacity: 0.7; margin-top: 12px;">💼 Affordable local marketing • Verified deals • Real customers</p>
         </div>
+        
+        <script>
+            function openAdvertiseForm() {
+                window.open('http://formfreely.com/embed/a1708c29-14d3-47bd-bb05-0ade6eb3881a', '_blank');
+            }
+        </script>
         
         <!-- Footer -->
         <div class="footer">

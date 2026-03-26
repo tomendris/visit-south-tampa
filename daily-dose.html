@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Basic SEO -->
+    <title>Daily Dose | Visit South Tampa</title>
+    <meta name="description" content="Your daily Tampa news rundown — top stories, Reddit buzz, and weekend events from South Tampa.">
+    <meta name="keywords" content="Tampa news, South Tampa news, daily Tampa, r/tampa, Tampa events">
+    <meta name="author" content="Visit South Tampa">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Daily Dose | Visit South Tampa">
+    <meta property="og:description" content="Your daily Tampa news rundown.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daily.visitsouthtampa.com">
+    <meta property="og:image" content="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/Gemini_Generated_Image_j9washj9washj9wa.png">
+    <meta property="og:site_name" content="Visit South Tampa">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daily Dose | Visit South Tampa">
+    <meta name="twitter:description" content="Your daily Tampa news rundown.">
+    <meta name="twitter:image" content="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/Gemini_Generated_Image_j9washj9washj9wa.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://daily.visitsouthtampa.com">
+    <link rel="icon" href="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/favicon-32x32-1.png" type="image/png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .date-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Stories List */
+        .stories-list {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .story-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 4px solid #2d5a87;
+        }
+        
+        .story-card.news { border-left-color: #2d5a87; }
+        .story-card.reddit { border-left-color: #ff4500; }
+        .story-card.weekend { border-left-color: #10b981; }
+        
+        .story-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: #2d5a87;
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 12px;
+        }
+        
+        .story-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .story-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .story-title a:hover {
+            text-decoration: underline;
+        }
+        
+        .story-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .story-desc {
+            font-size: 14px;
+            color: #444;
+        }
+        
+        /* Reddit Section */
+        .reddit-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 12px;
+        }
+        
+        .reddit-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .reddit-icon {
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .newsletter h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .newsletter p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #888;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 24px; }
+            .container { padding: 12px; }
+            .story-card { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <div class="hero">
+            <span class="date-badge">📰 Daily Dose</span>
+            <h1>Your Daily Tampa News Rundown</h1>
+            <p>Top stories, Reddit buzz, and weekend happenings — every morning at 8am.</p>
+        </div>
+        
+        <!-- Top Stories -->
+        <h2 class="section-header">🔥 Top 5 Tampa Stories Today</h2>
+        
+        <div class="stories-list">
+            <div class="story-card news">
+                <div class="story-title">
+                    <span class="story-number">1</span>
+                    <a href="https://baynews9.com/fl/tampa/morning-briefing/2026/03/25/morning-briefing--tampa---march-26--2026g" target="_blank">Opening Day is Here! Rays 2026 Season Begins</a>
+                </div>
+                <div class="story-meta">Source: Bay News 9</div>
+                <div class="story-desc">Tampa Bay hits the road to start the season against St. Louis.</div>
+            </div>
+            
+            <div class="story-card news">
+                <div class="story-title">
+                    <span class="story-number">2</span>
+                    <a href="https://www.tampabay28.com/news/gmtb/news-to-know-for-march-26-2026" target="_blank">Extreme Phase III Water Restrictions</a>
+                </div>
+                <div class="story-meta">Source: Tampa Bay 28</div>
+                <div class="story-desc">Tampa Bay residents react to new water restrictions.</div>
+            </div>
+            
+            <div class="story-card news">
+                <div class="story-title">
+                    <span class="story-number">3</span>
+                    <a href="https://www.fox13news.com/" target="_blank">Tampa Police Leadership Shakeup</a>
+                </div>
+                <div class="story-meta">Source: FOX 13</div>
+                <div class="story-desc">The second in command of TPD is out, raising retaliation allegations.</div>
+            </div>
+            
+            <div class="story-card news">
+                <div class="story-title">
+                    <span class="story-number">4</span>
+                    <a href="https://baynews9.com/fl/tampa/morning-briefing/2026/03/25/morning-briefing--tampa---march-26--2026g" target="_blank">Pizzo K-8 School Fight</a>
+                </div>
+                <div class="story-meta">Source: Bay News 9</div>
+                <div class="story-desc">Teachers, staff and families rally to keep school open after USF lease dispute.</div>
+            </div>
+            
+            <div class="story-card news">
+                <div class="story-title">
+                    <span class="story-number">5</span>
+                    <a href="https://www.wmnf.org/the-scoop-mar-26-2026-tampa-bay-florida-headlines-wmnf/" target="_blank">Assistant Chief Ruth Cate Alleges Retaliation</a>
+                </div>
+                <div class="story-meta">Source: WMNF</div>
+                <div class="story-desc">TPD assistant chief raises concerns, has retained legal counsel.</div>
+            </div>
+        </div>
+        
+        <!-- Reddit Buzz -->
+        <h2 class="section-header">💬 What's Buzzing on Reddit r/tampa</h2>
+        
+        <div class="stories-list">
+            <div class="story-card reddit">
+                <div class="story-title">
+                    <span class="story-number" style="background:#ff4500;">r</span>
+                    <a href="https://www.reddit.com/r/tampa/comments/1raqbud/i_want_to_give_a_heartfelt_thank_you_to_those/" target="_blank">Local Artist Thank You Post</a>
+                </div>
+                <div class="story-desc">Artist thanks Reddit community for showing up to "Student Paint and Tequila" event.</div>
+            </div>
+            
+            <div class="story-card reddit">
+                <div class="story-title">
+                    <span class="story-number" style="background:#ff4500;">r</span>
+                    <a href="https://www.reddit.com/r/tampa/comments/12myy5s/what_restaurant_has_wowed_you_recently/" target="_blank">Best Restaurant Recommendations</a>
+                </div>
+                <div class="story-desc">Gulf Coast Sourdough Co. getting major mentions in Seminole Heights.</div>
+            </div>
+            
+            <div class="story-card reddit">
+                <div class="story-title">
+                    <span class="story-number" style="background:#ff4500;">r</span>
+                    <a href="https://www.reddit.com/r/tampa/comments/1rckz90/indoor_birthday_ideas_for_fridays/" target="_blank">Indoor Birthday Ideas</a>
+                </div>
+                <div class="story-desc">Locals looking for vintage/art/plant-themed birthday ideas for Friday.</div>
+            </div>
+        </div>
+        
+        <!-- Weekend Events -->
+        <h2 class="section-header">📅 This Weekend in Tampa</h2>
+        
+        <div class="stories-list">
+            <div class="story-card weekend">
+                <div class="story-title">
+                    <span class="story-number" style="background:#10b981;">📅</span>
+                    <a href="https://cldeals.com/" target="_blank">Tequila + Tiki Takedown</a>
+                </div>
+                <div class="story-meta">Friday, March 27 | Hotel Flor | $45 GA Plus</div>
+                <div class="story-desc">Sample tequila and tiki cocktails from 20+ Tampa Bay mixologists.</div>
+            </div>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <h2>Get This in Your Inbox Daily 📬</h2>
+            <p>Fresh Tampa news delivered every morning at 8am.</p>
+            
+            <a href="https://visit-south-tampa.beehiiv.com/subscribe" class="cta-button">Subscribe Free</a>
+            
+            <p style="margin-top: 16px; font-size: 12px; opacity: 0.7;">🎉 No spam. Unsubscribe anytime.</p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 Visit South Tampa · Daily Dose</p>
+        </div>
+    </div>
+</body>
+</html>

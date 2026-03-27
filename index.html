@@ -3,31 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Basic SEO -->
-    <title>Daily Dose | Visit South Tampa</title>
-    <meta name="description" content="Your daily Tampa news rundown — top stories, Reddit buzz, and weekend events from South Tampa.">
-    <meta name="keywords" content="Tampa news, South Tampa news, daily Tampa, r/tampa, Tampa events">
-    <meta name="author" content="Visit South Tampa">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Daily Dose | Visit South Tampa">
-    <meta property="og:description" content="Your daily Tampa news rundown.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://daily.visitsouthtampa.com">
-    <meta property="og:image" content="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/Gemini_Generated_Image_j9washj9washj9wa.png">
-    <meta property="og:site_name" content="Visit South Tampa">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Daily Dose | Visit South Tampa">
-    <meta name="twitter:description" content="Your daily Tampa news rundown.">
-    <meta name="twitter:image" content="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/Gemini_Generated_Image_j9washj9washj9wa.png">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://daily.visitsouthtampa.com">
-    <link rel="icon" href="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/favicon-32x32-1.png" type="image/png">
-    
+    <title>Your Quick South Tampa Weekend Plan 🌴</title>
     <style>
         * {
             margin: 0;
@@ -69,34 +45,22 @@
             opacity: 0.9;
         }
         
-        .date-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-        
         /* Section Headers */
         .section-header {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 16px;
             color: #1a1a1a;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         
-        /* Stories List */
-        .stories-list {
+        /* Events Grid */
+        .events-grid {
             display: grid;
             gap: 16px;
             margin-bottom: 32px;
         }
         
-        .story-card {
+        .event-card {
             background: white;
             border-radius: 12px;
             padding: 20px;
@@ -104,73 +68,64 @@
             border-left: 4px solid #2d5a87;
         }
         
-        .story-card.news { border-left-color: #2d5a87; }
-        .story-card.reddit { border-left-color: #ff4500; }
-        .story-card.weekend { border-left-color: #10b981; }
+        .event-card.family { border-left-color: #10b981; }
+        .event-card.date { border-left-color: #f59e0b; }
+        .event-card.outdoors { border-left-color: #06b6d4; }
+        .event-card.community { border-left-color: #8b5cf6; }
+        .event-card.theater { border-left-color: #ef4444; }
         
-        .story-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            background: #2d5a87;
-            color: white;
-            border-radius: 50%;
-            font-size: 14px;
-            font-weight: 600;
-            margin-right: 12px;
+        .event-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
         }
         
-        .story-title {
+        .event-title {
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
+            margin-bottom: 4px;
         }
         
-        .story-title a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        .story-title a:hover {
-            text-decoration: underline;
-        }
-        
-        .story-meta {
+        .event-meta {
             font-size: 14px;
             color: #666;
             margin-bottom: 8px;
         }
         
-        .story-desc {
+        .event-desc {
             font-size: 14px;
             color: #444;
         }
         
-        /* Reddit Section */
-        .reddit-card {
-            background: #fff;
+        /* Weekend at a Glance */
+        .weekend-glance {
+            background: white;
             border-radius: 12px;
-            padding: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            margin-bottom: 12px;
         }
         
-        .reddit-header {
+        .day-row {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-            font-size: 13px;
-            color: #666;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
         }
         
-        .reddit-icon {
-            width: 20px;
-            height: 20px;
+        .day-row:last-child {
+            border-bottom: none;
+        }
+        
+        .day-label {
+            font-weight: 600;
+            width: 70px;
+            font-size: 14px;
+        }
+        
+        .day-activities {
+            flex: 1;
+            font-size: 14px;
+            color: #444;
         }
         
         /* Newsletter Section */
@@ -194,6 +149,18 @@
             margin-bottom: 20px;
         }
         
+        .newsletter Benefits {
+            font-size: 13px;
+            opacity: 0.8;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter Benefits li {
+            margin-bottom: 6px;
+            list-style: none;
+        }
+        
         .cta-button {
             display: inline-block;
             background: #10b981;
@@ -203,81 +170,6 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
-            cursor: pointer;
-            border: none;
-        }
-        
-        /* Modal */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .modal-overlay.active {
-            display: flex;
-        }
-        
-        .modal-content {
-            background: white;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 600px;
-            max-height: 95vh;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #333;
-            color: white;
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
-            z-index: 10;
-        }
-        
-        .modal-content iframe {
-            width: 100%;
-            height: 90vh;
-            border: none;
-            border-radius: 8px;
-            display: block;
-        }
-        
-        /* Advertising CTA */
-        .advertise-cta {
-            background: linear-gradient(135deg, #ff3388 0%, #ff6b6b 100%);
-            color: white;
-            border-radius: 12px;
-            padding: 32px;
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        
-        .advertise-cta h2 {
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-        
-        .advertise-cta p {
-            font-size: 14px;
-            opacity: 0.95;
-            margin-bottom: 20px;
         }
         
         /* Footer */
@@ -292,7 +184,7 @@
         @media (max-width: 480px) {
             .hero h1 { font-size: 24px; }
             .container { padding: 12px; }
-            .story-card { padding: 16px; }
+            .event-card { padding: 16px; }
         }
     </style>
 </head>
@@ -300,166 +192,89 @@
     <div class="container">
         <!-- Hero -->
         <div class="hero">
-            <span class="date-badge">📰 Daily Dose</span>
-            <h1>Your Daily Tampa News Rundown</h1>
-            <p>Top stories, Reddit buzz, and weekend happenings — every morning at 8am.</p>
+            <h1>Your Quick South Tampa Weekend Plan 🌴</h1>
+            <p>A curated look at what's worth doing this weekend in Hyde Park, Westshore, Bayshore, and beyond.</p>
         </div>
         
-        <!-- Top Stories -->
-        <h2 class="section-header">🔥 Top 5 Tampa Stories Today</h2>
+        <!-- This Weekend's Picks -->
+        <h2 class="section-header">5 Things Worth Doing This Weekend</h2>
         
-        <div class="stories-list">
-            <div class="story-card news">
-                <div class="story-title">
-                    <span class="story-number">1</span>
-                    <a href="https://baynews9.com/fl/tampa/morning-briefing/2026/03/25/morning-briefing--tampa---march-26--2026g" target="_blank">Opening Day is Here! Rays 2026 Season Begins</a>
-                </div>
-                <div class="story-meta">Source: Bay News 9</div>
-                <div class="story-desc">Tampa Bay hits the road to start the season against St. Louis.</div>
+        <div class="events-grid">
+            <div class="event-card family">
+                <div class="event-icon">🌸</div>
+                <div class="event-title">Posies Flower Truck</div>
+                <div class="event-meta">Fri & Sat · 11 AM – 3 PM · Hyde Park Village</div>
+                <div class="event-desc">Stroll through Village Circle and build your own bouquet from a fresh seasonal flower selection.</div>
             </div>
             
-            <div class="story-card news">
-                <div class="story-title">
-                    <span class="story-number">2</span>
-                    <a href="https://www.tampabay28.com/news/gmtb/news-to-know-for-march-26-2026" target="_blank">Extreme Phase III Water Restrictions</a>
-                </div>
-                <div class="story-meta">Source: Tampa Bay 28</div>
-                <div class="story-desc">Tampa Bay residents react to new water restrictions.</div>
+            <div class="event-card date">
+                <div class="event-icon">🎨</div>
+                <div class="event-title">Color Me Mine Date Night</div>
+                <div class="event-meta">Friday · 5 PM until close · Hyde Park Village</div>
+                <div class="event-desc">Couples get BOGO studio fees on Friday nights. Easy, creative date idea.</div>
             </div>
             
-            <div class="story-card news">
-                <div class="story-title">
-                    <span class="story-number">3</span>
-                    <a href="https://www.fox13news.com/" target="_blank">Tampa Police Leadership Shakeup</a>
-                </div>
-                <div class="story-meta">Source: FOX 13</div>
-                <div class="story-desc">The second in command of TPD is out, raising retaliation allegations.</div>
+            <div class="event-card outdoors">
+                <div class="event-icon">🚴</div>
+                <div class="event-title">Bike Westshore Ride</div>
+                <div class="event-meta">Saturday · 9:30 AM – 12:30 PM · Avion Park / Westshore</div>
+                <div class="event-desc">Guided community bike ride through Westshore highlighting safe routes and public art.</div>
             </div>
             
-            <div class="story-card news">
-                <div class="story-title">
-                    <span class="story-number">4</span>
-                    <a href="https://baynews9.com/fl/tampa/morning-briefing/2026/03/25/morning-briefing--tampa---march-26--2026g" target="_blank">Pizzo K-8 School Fight</a>
-                </div>
-                <div class="story-meta">Source: Bay News 9</div>
-                <div class="story-desc">Teachers, staff and families rally to keep school open after USF lease dispute.</div>
+            <div class="event-card community">
+                <div class="event-icon">🦸</div>
+                <div class="event-title">Heroes on the Run 5K</div>
+                <div class="event-meta">Sunday · 7:00 AM · Gadsden Park / South Tampa</div>
+                <div class="event-desc">Superhero-themed charity run supporting pediatric patients and families.</div>
             </div>
             
-            <div class="story-card news">
-                <div class="story-title">
-                    <span class="story-number">5</span>
-                    <a href="https://www.wmnf.org/the-scoop-mar-26-2026-tampa-bay-florida-headlines-wmnf/" target="_blank">Assistant Chief Ruth Cate Alleges Retaliation</a>
-                </div>
-                <div class="story-meta">Source: WMNF</div>
-                <div class="story-desc">TPD assistant chief raises concerns, has retained legal counsel.</div>
+            <div class="event-card theater">
+                <div class="event-icon">🎭</div>
+                <div class="event-title">The Shark Is Broken</div>
+                <div class="event-meta">Weekend Performances · Straz Center</div>
+                <div class="event-desc">Behind-the-scenes stage production inspired by the making of Jaws.</div>
             </div>
         </div>
         
-        <!-- Reddit Buzz -->
-        <h2 class="section-header">💬 What's Buzzing on Reddit r/tampa</h2>
-        
-        <div class="stories-list">
-            <div class="story-card reddit">
-                <div class="story-title">
-                    <span class="story-number" style="background:#ff4500;">r</span>
-                    <a href="https://www.reddit.com/r/tampa/comments/1raqbud/i_want_to_give_a_heartfelt_thank_you_to_those/" target="_blank">Local Artist Thank You Post</a>
-                </div>
-                <div class="story-desc">Artist thanks Reddit community for showing up to "Student Paint and Tequila" event.</div>
+        <!-- Weekend at a Glance -->
+        <div class="weekend-glance">
+            <h2 class="section-header">Weekend at a Glance ⚡</h2>
+            
+            <div class="day-row">
+                <div class="day-label">Friday 🌸</div>
+                <div class="day-activities">Posies Flower Truck → Color Me Mine Date Night</div>
             </div>
             
-            <div class="story-card reddit">
-                <div class="story-title">
-                    <span class="story-number" style="background:#ff4500;">r</span>
-                    <a href="https://www.reddit.com/r/tampa/comments/12myy5s/what_restaurant_has_wowed_you_recently/" target="_blank">Best Restaurant Recommendations</a>
-                </div>
-                <div class="story-desc">Gulf Coast Sourdough Co. getting major mentions in Seminole Heights.</div>
+            <div class="day-row">
+                <div class="day-label">Saturday 🚴</div>
+                <div class="day-activities">Bike Westshore Ride → Hyde Park stroll</div>
             </div>
             
-            <div class="story-card reddit">
-                <div class="story-title">
-                    <span class="story-number" style="background:#ff4500;">r</span>
-                    <a href="https://www.reddit.com/r/tampa/comments/1rckz90/indoor_birthday_ideas_for_fridays/" target="_blank">Indoor Birthday Ideas</a>
-                </div>
-                <div class="story-desc">Locals looking for vintage/art/plant-themed birthday ideas for Friday.</div>
-            </div>
-        </div>
-        
-        <!-- Weekend Events -->
-        <h2 class="section-header">📅 This Weekend in Tampa</h2>
-        
-        <div class="stories-list">
-            <div class="story-card weekend">
-                <div class="story-title">
-                    <span class="story-number" style="background:#10b981;">📅</span>
-                    <a href="https://cldeals.com/" target="_blank">Tequila + Tiki Takedown</a>
-                </div>
-                <div class="story-meta">Friday, March 27 | Hotel Flor | $45 GA Plus</div>
-                <div class="story-desc">Sample tequila and tiki cocktails from 20+ Tampa Bay mixologists.</div>
-            </div>
-        </div>
-        
-        <!-- Hot Deal -->
-        <h2 class="section-header">🔥 Today's Hot Deal</h2>
-        
-        <div class="stories-list">
-            <div class="story-card weekend" style="border-left-color: #ff3388;">
-                <div class="story-title">
-                    <span class="story-number" style="background:#ff3388;">💰</span>
-                    <a href="https://www.groupon.com/local/tampa/food-and-drink" target="_blank">$10 for $20 at Gigglewaters</a>
-                </div>
-                <div class="story-meta">Valid at Gigglewaters Bar & Cinema | CL Deals</div>
-                <div class="story-desc">Happy Hour deals: $4 wells, $5 drafts, $5 glasses of wine. Great craft beer selection in a laid-back atmosphere.</div>
+            <div class="day-row">
+                <div class="day-label">Sunday 🦸</div>
+                <div class="day-activities">Heroes on the Run 5K → Theater option</div>
             </div>
         </div>
         
         <!-- Newsletter -->
         <div class="newsletter">
-            <h2>Get This in Your Inbox Daily 📬</h2>
-            <p>Fresh Tampa news delivered every morning at 8am.</p>
+            <h2>Get South Tampa Plans in Your Inbox ✉️</h2>
+            <p>Once a week — every Friday morning before the weekend hits.</p>
             
-            <a href="https://visit-south-tampa.beehiiv.com/subscribe" class="cta-button">Subscribe Free</a>
+            <ul class="Benefits">
+                <li>✓ Weekend event picks — hand-selected</li>
+                <li>✓ New restaurant openings & local specials</li>
+                <li>✓ Hidden gems from around South Tampa</li>
+            </ul>
             
-            <p style="margin-top: 16px; font-size: 12px; opacity: 0.7;">🎉 No spam. Unsubscribe anytime.</p>
+            <a href="https://visit-south-tampa.beehiiv.com/subscribe" class="cta-button">Join the List — It's Free</a>
+            
+            <p style="margin-top: 16px; font-size: 12px; opacity: 0.7;">🎉 No spam. No ads. Unsubscribe anytime.</p>
         </div>
-        
-        <!-- Advertising CTA -->
-        <div class="advertise-cta">
-            <h2>📢 Advertise Your Business</h2>
-            <p>Reach thousands of South Tampa locals daily. Get your business in front of an engaged, local audience.</p>
-            
-            <button class="cta-button" onclick="openModal()">
-                <img src="https://www.coupons4tampabay.com/wp-content/uploads/2023/01/add-busines.png" alt="Advertise with Visit South Tampa" style="width:100%;max-width:400px;border-radius:12px;margin-bottom:16px;">
-                <br>List Your Business Today →
-            </button>
-            
-            <p style="font-size: 12px; opacity: 0.7; margin-top: 12px;">💼 Affordable local marketing • Verified deals • Real customers</p>
-        </div>
-        
-        <!-- Modal -->
-        <div class="modal-overlay" id="advertiseModal">
-            <div class="modal-content">
-                <button class="modal-close" onclick="closeModal()">✕</button>
-                <iframe src="https://formfreely.com/embed/a1708c29-14d3-47bd-bb05-0ade6eb3881a" width="100%" height="600" frameborder="0" style="border: 1px solid #e5e7eb; border-radius: 8px;"></iframe>
-            </div>
-        </div>
-        
-        <script>
-            function openModal() {
-                document.getElementById('advertiseModal').classList.add('active');
-            }
-            
-            function closeModal() {
-                document.getElementById('advertiseModal').classList.remove('active');
-            }
-            
-            document.getElementById('advertiseModal').addEventListener('click', function(e) {
-                if (e.target === this) closeModal();
-            });
-        </script>
         
         <!-- Footer -->
         <div class="footer">
-            <p>© 2026 Visit South Tampa · Daily Dose</p>
+            <p>© 2026 Visit South Tampa · Curated for South Tampa locals</p>
         </div>
     </div>
 </body>

@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Quick South Tampa Weekend Plan 🌴</title>
+    
+    <!-- Basic SEO -->
+    <title>South Tampa Weekend Plan | Visit South Tampa</title>
+    <meta name="description" content="Your weekly guide to what's worth doing in South Tampa — events, openings, deals, and hidden gems in Hyde Park, Bayshore, Westshore, and SoHo.">
+    <meta name="keywords" content="South Tampa events, things to do Tampa, Hyde Park Tampa, weekend Tampa, South Tampa restaurants">
+    <meta name="author" content="Visit South Tampa">
+
+    <!-- Open Graph (Facebook/social sharing) -->
+    <meta property="og:title" content="Your Quick South Tampa Weekend Plan">
+    <meta property="og:description" content="Curated events, hidden gems, and local deals — delivered weekly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weekend.visitsouthtampa.com">
+    <meta property="og:image" content="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/Gemini_Generated_Image_j9washj9washj9wa.png">
+    <meta property="og:site_name" content="Visit South Tampa">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="South Tampa Weekend Plan">
+    <meta name="twitter:description" content="Curated events and hidden gems — delivered weekly.">
+    <meta name="twitter:image" content="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/Gemini_Generated_Image_j9washj9washj9wa.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://weekend.visitsouthtampa.com">
+    <link rel="icon" href="https://www.coupons4tampabay.com/wp-content/uploads/2026/03/favicon-32x32-1.png" type="image/png">
     <style>
         * {
             margin: 0;
@@ -79,7 +102,14 @@
             margin-bottom: 8px;
         }
         
-        .event-title {
+        .event-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .event-title a:hover {
+            text-decoration: underline;
+        }
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 4px;
@@ -172,6 +202,92 @@
             font-size: 16px;
         }
         
+        /* Advertising CTA */
+        .advertise-cta {
+            background: linear-gradient(135deg, #ff3388 0%, #ff6b6b 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .advertise-cta h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .advertise-cta p {
+            font-size: 14px;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        .advertise-button {
+            display: inline-block;
+            background: white;
+            color: #ff3388;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 600px;
+            max-height: 95vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .modal-content iframe {
+            width: 100%;
+            height: 90vh;
+            border: none;
+            border-radius: 8px;
+            display: block;
+        }
+        
         /* Footer */
         .footer {
             text-align: center;
@@ -202,35 +318,35 @@
         <div class="events-grid">
             <div class="event-card family">
                 <div class="event-icon">🌸</div>
-                <div class="event-title">Posies Flower Truck</div>
+                <div class="event-title"><a href="https://www.instagram.com/posiesflowertruck/" target="_blank">Posies Flower Truck</a></div>
                 <div class="event-meta">Fri & Sat · 11 AM – 3 PM · Hyde Park Village</div>
                 <div class="event-desc">Stroll through Village Circle and build your own bouquet from a fresh seasonal flower selection.</div>
             </div>
             
             <div class="event-card date">
                 <div class="event-icon">🎨</div>
-                <div class="event-title">Color Me Mine Date Night</div>
+                <div class="event-title"><a href="https://www.colorminemine.com/" target="_blank">Color Me Mine Date Night</a></div>
                 <div class="event-meta">Friday · 5 PM until close · Hyde Park Village</div>
                 <div class="event-desc">Couples get BOGO studio fees on Friday nights. Easy, creative date idea.</div>
             </div>
             
             <div class="event-card outdoors">
                 <div class="event-icon">🚴</div>
-                <div class="event-title">Bike Westshore Ride</div>
+                <div class="event-title"><a href="https://www.meetup.com/tampa-bay-cycling/" target="_blank">Bike Westshore Ride</a></div>
                 <div class="event-meta">Saturday · 9:30 AM – 12:30 PM · Avion Park / Westshore</div>
                 <div class="event-desc">Guided community bike ride through Westshore highlighting safe routes and public art.</div>
             </div>
             
             <div class="event-card community">
                 <div class="event-icon">🦸</div>
-                <div class="event-title">Heroes on the Run 5K</div>
+                <div class="event-title"><a href="https://thatssotampa.com/" target="_blank">Heroes on the Run 5K</a></div>
                 <div class="event-meta">Sunday · 7:00 AM · Gadsden Park / South Tampa</div>
                 <div class="event-desc">Superhero-themed charity run supporting pediatric patients and families.</div>
             </div>
             
             <div class="event-card theater">
                 <div class="event-icon">🎭</div>
-                <div class="event-title">The Shark Is Broken</div>
+                <div class="event-title"><a href="https://www.strazcenter.org/events/detail/the-shark-is-broken" target="_blank">The Shark Is Broken</a></div>
                 <div class="event-meta">Weekend Performances · Straz Center</div>
                 <div class="event-desc">Behind-the-scenes stage production inspired by the making of Jaws.</div>
             </div>
@@ -272,10 +388,74 @@
             <p style="margin-top: 16px; font-size: 12px; opacity: 0.7;">🎉 No spam. No ads. Unsubscribe anytime.</p>
         </div>
         
+        <!-- Advertising CTA -->
+        <div class="advertise-cta">
+            <h2>📢 Advertise Your Business</h2>
+            <p>Reach thousands of South Tampa locals every week. Get your business in front of an engaged, local audience.</p>
+            
+            <button class="advertise-button" onclick="openModal()">
+                <img src="https://www.coupons4tampabay.com/wp-content/uploads/2023/01/add-busines.png" alt="Advertise with Visit South Tampa" style="width:100%;max-width:400px;border-radius:12px;margin-bottom:16px;">
+                <br>List Your Business Today →
+            </button>
+            
+            <p style="font-size: 12px; opacity: 0.7; margin-top: 12px;">💼 Affordable local marketing • Verified deals • Real customers</p>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal-overlay" id="advertiseModal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal()">✕</button>
+                <iframe src="https://formfreely.com/embed/a1708c29-14d3-47bd-bb05-0ade6eb3881a" width="100%" height="600" frameborder="0" style="border: 1px solid #e5e7eb; border-radius: 8px;"></iframe>
+            </div>
+        </div>
+        
+        <script>
+            function openModal() {
+                document.getElementById('advertiseModal').classList.add('active');
+            }
+            
+            function closeModal() {
+                document.getElementById('advertiseModal').classList.remove('active');
+            }
+            
+            document.getElementById('advertiseModal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+        </script>
+        
         <!-- Footer -->
         <div class="footer">
             <p>© 2026 Visit South Tampa · Curated for South Tampa locals</p>
         </div>
+        
+        <!-- Modal -->
+        <div class="modal-overlay" id="advertiseModal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal()">✕</button>
+                <iframe src="http://formfreely.com/embed/a1708c29-14d3-47bd-bb05-0ade6eb3881a" class="modal-iframe" title="Advertising Form"></iframe>
+            </div>
+        </div>
+        
+        <script>
+            function openModal() {
+                document.getElementById('advertiseModal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeModal() {
+                document.getElementById('advertiseModal').classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            document.getElementById('advertiseModal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+            
+            document.querySelector('.advertise-button').onclick = function(e) {
+                e.preventDefault();
+                openModal();
+            };
+        </script>
     </div>
 </body>
 </html>
